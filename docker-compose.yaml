@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  master_jenjins-1:
+    image: jenkins_new
+    container_name: jenkins
+      #network_mode: "host"
+    environment:
+    - Jenkins=master
+    extra_hosts:
+    - "palanivel.com:10.151.0.5"
+    ports:
+        - "8082:8080"
+    restart: always
+
